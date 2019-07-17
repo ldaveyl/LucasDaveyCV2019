@@ -1,0 +1,126 @@
+\documentclass{article}
+
+% Change the margins
+\usepackage[margin=2.5cm]{geometry}
+
+% Make links clickable
+\usepackage{hyperref}
+
+% Add profile picture
+\usepackage{graphicx}
+\graphicspath{ {/home/ldavey/Pictures/} } % Path to folder containing image
+
+% Package for precise positioning of images
+\usepackage{tikzpagenodes}
+
+% Suppress page numbering
+\pagenumbering{gobble}
+
+% Define custom colors
+\usepackage{xcolor}
+\definecolor{darkgray}{rgb}{0.2, 0.2, 0.2}
+\definecolor{lightgrey}{rgb}{0.66, 0.66, 0.66}
+\definecolor{linkedinblue}{rgb}{0.0, 0.47, 0.71}
+
+% Change format of sections
+\usepackage{titlesec}
+\titleformat{\section}
+{}
+{}
+{0em}
+{\bfseries\Large}[\color{lightgrey}{\titlerule}]
+
+% Define new font family 
+\usepackage{titling}
+\usepackage{fontspec}
+\newfontfamily\Roboto[BoldFont=Roboto-Bold]{Roboto}
+
+% Set font for entire document
+\setmainfont[Ligatures=TeX]{Roboto}
+
+% Set default font color to darkgray
+\color{darkgray}
+
+% Add \HUGE as a font size
+\usepackage{moresize}
+
+% Use icons from fontawesome (prefixed by \fa)
+\usepackage{fontawesome}
+
+% Define title markup
+\renewcommand{\maketitle}{
+\begin{flushleft}
+    {\HUGE\Roboto\bfseries{Lucas} \bfseries{Davey}}
+
+    \vspace{.25em}
+    
+    Master student Bioinformatics
+    
+    \vspace{.25em}
+    
+    \small{\faHome \hspace{.1em} Ghent, Belgium \hspace{.25em} \textcolor{lightgrey}{|} \hspace{.25em} \faMobile \hspace{.1em} (+32) 474 526 981 \hspace{.25em} \textcolor{lightgrey}{|}  
+    \hspace{.25em} \faEnvelope \hspace{.1em} \href{mailto:lucas.davey1@gmail.com}{lucas.davey1@gmail.com} \hspace{.25em} \textcolor{lightgrey}{|} \hspace{.25em} \textcolor{linkedinblue}{\faLinkedinSquare} \hspace{.1em} \href{https://www.linkedin.com/in/ldaveyl}{linkedin.com/in/ldaveyl}}
+\end{flushleft}
+}
+
+% Package for controlling table size
+\usepackage{array}
+
+\begin{document}
+
+% Insert profile picture
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west, shift={(16.1cm, -0.8cm)}]
+    at (current page.north west)
+    {
+    \includegraphics[width=3.2cm]{output.png}
+    };
+\end{tikzpicture}
+\maketitle
+
+\section{About me}
+I am 23 years old and I like data science with a focus on machine learning. In my spare time I enjoy watching movies and swimming.
+Learning new skills is very rewarding to me so I am open to challenges.
+My biggest assets are my knowledge of Python and R and my ability to work in a team. 
+
+\section{Skills}
+\setlength\extrarowheight{12pt}
+\begin{tabular}{ m{1cm} m{5cm} m{1cm} m{5cm}}
+    Python & \faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle & 
+    R & \faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\textcolor{lightgrey}{\faCircle} \\
+    Perl & \faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\textcolor{lightgrey}{\faCircle\hspace{.04cm}\faCircle} &
+    Linux & \faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\textcolor{lightgrey}{\faCircle\hspace{.04cm}} \\ 
+\end{tabular}
+
+\section{Education}
+\begin{tabular}{ p{2.3cm} p{12cm} }
+    2017 - Present & \textbf{Ghent University}
+
+    Msc. Bioinformatics - Systems Biology \\
+
+    2014 - 2017 & \textbf{Ghent University}
+    
+    Bsc. Biochemistry and Biotechnology \\
+\end{tabular}
+
+\section{Master Thesis}
+\begin{tabular}{ p{2.3cm} p{12cm}}
+    2017 - Present & \textbf{Ghent University - Department of Mathematical Modelling and Data Science}
+
+    Uncovering promoter-sigma factor binding using massive parallel sequencing and machine learning algorithms \\
+\end{tabular}
+
+\section{Internship}
+\begin{tabular}{ p{2.3cm} p{12cm} }
+    jul - aug 2018 & \textbf{Ablynx}
+    
+    Writing a Python package within BioPython to parse the output of nanobody annotation.
+\end{tabular}
+
+\section{Language}
+\begin{tabular}{ p{2.3cm} p{12cm} }
+    Dutch & Fluent (Native language) \\
+    English & Fluent (Bilingual language) \\
+    French & Advanced \\
+\end{tabular}
+\end{document}
