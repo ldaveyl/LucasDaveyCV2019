@@ -33,7 +33,6 @@
 % Define new font family 
 \usepackage{titling}
 \usepackage{fontspec}
-\newfontfamily\Roboto[BoldFont=Roboto-Bold]{Roboto}
 
 % Set font for entire document
 \setmainfont[Ligatures=TeX]{Roboto}
@@ -50,7 +49,7 @@
 % Define title markup
 \renewcommand{\maketitle}{
 \begin{flushleft}
-    {\HUGE\Roboto\bfseries{Lucas} \bfseries{Davey}}
+    {\HUGE\bfseries{Lucas} \bfseries{Davey}}
 
     \vspace{.25em}
     
@@ -79,17 +78,17 @@
 \maketitle
 
 \section{About me}
-I am 23 years old and I like data science with a focus on machine learning. In my spare time I enjoy watching movies and swimming.
+I am 24 years old and I like data science with a focus on machine learning. In my spare time I enjoy watching movies and swimming.
 Learning new skills is very rewarding to me so I am open to challenges.
 My biggest assets are my knowledge of Python and R and my ability to work in a team. 
 
 \section{Skills}
-\setlength\extrarowheight{12pt}
-\begin{tabular}{ m{1cm} m{5cm} m{1cm} m{5cm}}
-    Python & \faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle & 
-    R & \faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\textcolor{lightgrey}{\faCircle} \\
-    Perl & \faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\textcolor{lightgrey}{\faCircle\hspace{.04cm}\faCircle} &
-    Linux & \faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\textcolor{lightgrey}{\faCircle\hspace{.04cm}} \\ 
+% Circles that can be used to indicate level of skill
+%\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\textcolor{lightgrey}{\faCircle} & 
+\setlength\extrarowheight{10pt}
+\begin{tabular}{ m{2.5cm} m{1cm} m{2.5cm} m{1cm} m{2.5cm} m{1cm}}
+    Python & & R/bioconductor & & PostgreSQL & \\ 
+    Perl & & GNU/Linux & & Git\\
 \end{tabular}
 
 \section{Education}
@@ -105,7 +104,7 @@ My biggest assets are my knowledge of Python and R and my ability to work in a t
 
 \section{Master Thesis}
 \begin{tabular}{ p{2.3cm} p{12cm}}
-    2017 - Present & \textbf{Ghent University - Department of Mathematical Modelling and Data Science}
+    2018 - Present & \textbf{Ghent University - Department of Mathematical Modelling and Data Science}
 
     Uncovering promoter-sigma factor binding using massive parallel sequencing and machine learning algorithms \\
 \end{tabular}
@@ -114,13 +113,13 @@ My biggest assets are my knowledge of Python and R and my ability to work in a t
 \begin{tabular}{ p{2.3cm} p{12cm} }
     jul - aug 2018 & \textbf{Ablynx}
     
-    Writing a Python package within BioPython to parse the output of nanobody annotation.
+    Developing a Python package within BioPython to parse the output of nanobody annotation.
 \end{tabular}
 
 \section{Language}
 \begin{tabular}{ p{2.3cm} p{12cm} }
     Dutch & Fluent (Native language) \\
     English & Fluent (Bilingual language) \\
-    French & Advanced \\
+    French & Sufficient\\
 \end{tabular}
 \end{document}
