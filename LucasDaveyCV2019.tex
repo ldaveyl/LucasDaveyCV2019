@@ -34,6 +34,9 @@
 \usepackage{titling}
 \usepackage{fontspec}
 
+% Use horizontal lists
+\usepackage[inline]{enumitem}
+
 % Set font for entire document
 \setmainfont[Ligatures=TeX]{Roboto}
 
@@ -45,6 +48,11 @@
 
 % Use icons from fontawesome (prefixed by \fa)
 \usepackage{fontawesome}
+
+% Set paragraphs
+\setlength{\parindent}{0pt} % remove indent after starting a new paragraph
+\setlength{\parskip}{0pt} % space between paragraphs
+\linespread{1} % line spacing of 1
 
 % Define title markup
 \renewcommand{\maketitle}{
@@ -66,7 +74,6 @@
 \usepackage{array}
 
 \begin{document}
-
 % Insert profile picture
 \begin{tikzpicture}[remember picture, overlay]
     \node[anchor=north west, shift={(16.1cm, -0.8cm)}]
@@ -78,17 +85,14 @@
 \maketitle
 
 \section{About me}
-I am 24 years old and I like data science with a focus on machine learning. In my spare time I enjoy watching movies and swimming.
-Learning new skills is very rewarding to me so I am open to challenges.
-My biggest assets are my knowledge of Python and R and my ability to work in a team. 
+I am 24 years old and I like Bioinformatics with a focus on data science. I enjoy watching movies, swimming and
+learning new skills. My biggest assets are my knowledge of Python and R and my ability to work in a team. 
 
 \section{Skills}
-% Circles that can be used to indicate level of skill
-%\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\faCircle\hspace{.04cm}\textcolor{lightgrey}{\faCircle} & 
-\setlength\extrarowheight{10pt}
-\begin{tabular}{ m{2.5cm} m{1cm} m{2.5cm} m{1cm} m{2.5cm} m{1cm}}
-    Python & & R/bioconductor & & PostgreSQL & \\ 
-    Perl & & GNU/Linux & & Git\\
+\setlength\extrarowheight{6pt}
+\begin{tabular}{ m{3cm} m{3cm} m{3cm} m{4cm}}
+    \bullet\hspace{.1cm} Python & \bullet\hspace{.1cm} R/bioconductor & \bullet\hspace{.1cm} PostgreSQL & \bullet\hspace{.1cm} Perl \\
+    \bullet\hspace{.1cm} GNU/Linux & \bullet\hspace{.1cm} bash & \bullet\hspace{.1cm} Git & \bullet\hspace{.1cm} Jupyter Notebook \\ 
 \end{tabular}
 
 \section{Education}
@@ -109,17 +113,21 @@ My biggest assets are my knowledge of Python and R and my ability to work in a t
     Uncovering promoter-sigma factor binding using massive parallel sequencing and machine learning algorithms \\
 \end{tabular}
 
-\section{Internship}
+\section{Experience}
 \begin{tabular}{ p{2.3cm} p{12cm} }
+    oct - dec 2019 & \textbf{Ghent University}
+
+    Teaching assistant - Statistics exercises in R \\
+
     jul - aug 2018 & \textbf{Ablynx}
     
-    Developing a Python package within BioPython to parse the output of nanobody annotation.
+    Summer internship - Learning how to parse the output of a nanobody annotation program with Python\\
 \end{tabular}
 
-\section{Language}
+\section{Languages}
 \begin{tabular}{ p{2.3cm} p{12cm} }
     Dutch & Fluent (Native language) \\
     English & Fluent (Bilingual language) \\
-    French & Sufficient\\
+    French & Basic\\
 \end{tabular}
 \end{document}
