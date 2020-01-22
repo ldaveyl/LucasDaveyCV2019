@@ -1,4 +1,4 @@
-Minimalistic one-page Latex template for a CV
+One-page Latex template for a CV
 
   
 
